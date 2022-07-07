@@ -105,4 +105,4 @@ if __name__ == "__main__":
     _Server.configure(args)
 
     # Start server
-    server.start_webserver(options=args, protocol=_Server)
+    server.start_webserver(options=args, protocol=_Server, disableLogging=True)
