@@ -1,4 +1,4 @@
-FROM ghcr.io/geode-solutions/vtk:3.9-gpu
+FROM ghcr.io/geode-solutions/vtk:3.9-cpu
 
 WORKDIR /app
 
