@@ -24,6 +24,7 @@ r"""
 import os
 import sys
 import argparse
+import aiohttp
 
 # Try handle virtual env if provided
 if '--virtual-env' in sys.argv:
@@ -104,4 +105,4 @@ if __name__ == "__main__":
     _Server.configure(args)
 
     # Start server
-    server.start_webserver(options=args, protocol=_Server, disableLogging=True)
+    server.start_webserver(options=args, protocol=_Server)
