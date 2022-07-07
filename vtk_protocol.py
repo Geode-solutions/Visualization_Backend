@@ -47,11 +47,11 @@ class VtkView(vtk_protocols.vtkWebProtocol):
         VtpFilename = filenames['VtpFilename']
         
         DataReader = self.DataReader
-        DataReader.SetFileName(f"C:\\Users\\JulienChampagnol\\Code\\web-project-templates\\vue-vtkjs-pvw-template\\src\\static\\{VtpFilename}")
+        DataReader.SetFileName(f"./{VtpFilename}")
 
 
         ImageReader = self.ImageReader
-        ImageReader.SetFileName(f"C:\\Users\\JulienChampagnol\\Code\\web-project-templates\\vue-vtkjs-pvw-template\\src\\static\\{VtiFilename}")
+        ImageReader.SetFileName(f"./{VtiFilename}")
         texture = vtk.vtkTexture()
         texture.SetInputConnection(ImageReader.GetOutputPort())
 
