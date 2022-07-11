@@ -1,6 +1,7 @@
 import string
 import time
 import os
+import logging
 
 from numpy import array
 
@@ -42,7 +43,7 @@ class VtkView(vtk_protocols.vtkWebProtocol):
 
     @exportRpc("send.filenames")
     def sendFilenames(self, filenames):
-        print(filenames)
+        logging.error(filenames)
         VtiFilename = filenames['VtiFilename']
         VtpFilename = filenames['VtpFilename']
         
@@ -50,10 +51,10 @@ class VtkView(vtk_protocols.vtkWebProtocol):
         DataReader.SetFileName(f"./{VtpFilename}")
 
 
-        print('lines')
+        logging.error('lines')
         with open(f"./{VtiFilename}") as f:
             lines = f.readlines()
-            print(lines)
+            logging.error(lines)
         ImageReader = self.ImageReader
         ImageReader.SetFileName(f"./{VtiFilename}")
         texture = vtk.vtkTexture()
