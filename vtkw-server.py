@@ -104,5 +104,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     _Server.configure(args)
 
+    print('start')
     # Start server
-    server.start_webserver(options=args, protocol=_Server, disableLogging=True)
+    server.start_webserver(options=args, protocol=_Server)
