@@ -50,9 +50,13 @@ class VtkView(vtk_protocols.vtkWebProtocol):
         DataReader.SetFileName(f"./{VtpFilename}")
 
 
+        with open(f"./{VtiFilename}") as f:
+            lines = f.readlines()
+            print(lines)
         ImageReader = self.ImageReader
         ImageReader.SetFileName(f"./{VtiFilename}")
         texture = vtk.vtkTexture()
+
         texture.SetInputConnection(ImageReader.GetOutputPort())
 
         actor = vtk.vtkActor()
