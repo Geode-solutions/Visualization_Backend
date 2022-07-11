@@ -50,6 +50,7 @@ class VtkView(vtk_protocols.vtkWebProtocol):
         DataReader.SetFileName(f"./{VtpFilename}")
 
 
+        print('lines')
         with open(f"./{VtiFilename}") as f:
             lines = f.readlines()
             print(lines)
