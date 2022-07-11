@@ -51,10 +51,10 @@ class VtkView(vtk_protocols.vtkWebProtocol):
         DataReader.SetFileName(f"./{VtpFilename}")
 
 
-        logging.error('lines')
-        with open(f"./{VtiFilename}") as f:
-            lines = f.readlines()
-            logging.error(lines)
+        # logging.error('lines')
+        # with open(f"./{VtiFilename}") as f:
+        #     lines = f.readlines()
+        #     logging.error(lines)
         ImageReader = self.ImageReader
         ImageReader.SetFileName(f"./{VtiFilename}")
         texture = vtk.vtkTexture()
