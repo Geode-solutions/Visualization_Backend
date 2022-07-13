@@ -19,5 +19,5 @@ services:
     ports:
       - "1234:1234"
     build:
-      context: .
+      context: ./
       dockerfile: Dockerfile
