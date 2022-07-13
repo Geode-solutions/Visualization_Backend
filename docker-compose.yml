@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  Geode-BackEnd:
+    image: ghcr.io/geode-solutions/geode-backend:develop
+    container_name: Geode-BackEnd
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - ID=123456
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+  Visualization_Backend:
+    image: ghcr.io/geode-solutions/visualization_backend:develop
+    container_name: Visualization_Backend
+    ports:
+      - "1234:1234"
+    build:
+      context: .
+      dockerfile: Dockerfile
